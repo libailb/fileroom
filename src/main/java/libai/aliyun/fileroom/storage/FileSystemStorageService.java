@@ -60,6 +60,7 @@ public class FileSystemStorageService implements StorageService
     {
         try
         {
+            System.out.println(this.rootLocation);
             return Files.walk(this.rootLocation, 1)  //path -> !path.equals(this.rootLocation)
                     .filter(new Predicate<Path>()
                     {
